@@ -1,0 +1,243 @@
+$mainColor : #f6f6f6;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Tahoma, arial;
+  background-color: $mainColor;
+  margin: 0;
+}
+.main_header {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 1px 1px 10px 1px lightgrey;
+  .container {
+    h2 {
+      font-weight: bold;
+    }
+  }
+}
+.content{
+  .search_field{
+    margin-top:30px;
+    margin-bottom: 30px;
+    .search_box{
+      width: 400px;
+      height: 40px;
+      padding-left: 10px;
+      border: 1px solid lightgrey;
+      background-color: white;
+      display: inline-block;
+      i{
+        font-size: larger;
+        color: grey;
+      }
+      input{
+        outline: none;
+        height: 100%;
+        width: 93%;
+        border: none;
+        color: grey;
+      }
+    }
+  
+    select{
+      padding-left: 10px;
+      height: 40px;
+      width: 200px;
+      float: right;
+      border: none;
+      color: grey;
+    }
+  }
+  .countries_field{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    .country_card{ 
+      margin-bottom: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 23.5%;
+      overflow: hidden;
+      display: inline-block;
+      .country_flag{
+        width: 100%;
+        height: 60%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .country_info{
+        background-color: white;
+        padding: 10px;
+        height: 40%;
+        span{
+          display: block;
+        }
+        .country_name{
+          font-weight: bold;
+        }
+      }
+    }
+       
+
+  }
+}
+.clicked_country{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+ 
+  header{
+    width: 100%;
+    margin:50px 0;
+    button{
+      padding:5px 25px;
+      background-color: white;
+      color: gray;
+      border: none;
+      outline: none;
+      box-shadow: 1px 1px 10px 1px lightgrey;
+      border-radius: 3px;
+      i{
+        margin-right: 10px;
+      }
+    }
+  
+  }
+  .flag_img{
+    height: 380px;
+    width: 420px;
+    margin-right: 20px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .country_info{ 
+    padding: 25px;
+    background-color: white;
+    aside{
+      width: 250px;
+      display: inline-grid;
+      span{
+        display: block;
+      }
+    }
+    footer{
+      margin-top: 30px;
+      display: flex;
+      h5{
+      margin-right: 60px;
+      }
+      span{
+        background-color: white;
+        box-shadow: 1px 1px 10px 1px lightgrey;
+        border-radius: 3px;
+        margin: 0 5px;
+        padding: 2px 30px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+ 
+  .content{
+    .countries_field{
+      .country_card{ 
+        width: 32%;
+      }
+    }
+  }
+  .clicked_country{
+    .flag_img{
+      height: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .country_info{ 
+      width: 97.8%;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .clicked_country{
+    .country_info{ 
+      width: 97.1%;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  
+  .content{
+    .search_field{
+      margin-top:30px;
+      margin-bottom: 30px;
+      .search_box{
+        width: 300px;
+        input{
+          width: 90%;
+        }
+      }
+    
+      select{
+        width: 100px;
+      }
+    }
+    .countries_field{
+      .country_card{ 
+        width: 48%;
+      }
+    }
+  }
+  .clicked_country{
+    .country_info{ 
+      width: 96%;
+      aside{
+        width: 217px;
+        span{
+          display: block;
+        }
+      }
+      footer{
+        margin-top: 30px;
+        display: flex;
+        h5{
+          font-size: medium;
+          margin-right: 30px;
+        }
+        span{
+          padding: 7px 25px;
+          width: 80px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 557px) {
+  .clicked_country{
+    .country_info{ 
+      width: 95.5%;
+      aside{
+        width: 188px;
+      }
+      footer{
+      
+        span{
+          padding: 7px 17px;
+          width: 70px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
